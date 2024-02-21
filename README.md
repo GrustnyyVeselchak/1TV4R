@@ -1,8 +1,20 @@
-# React + Vite
+# 1TV4R - The first test VITE for React.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to 1TV4R, a repository created to explore VITE for React.js and to conduct tests related to the IDBS project.
 
-Currently, two official plugins are available:
+## About
+This repository was my first experiment with VITE to understand its functionality and integration into the React.js framework. Primarily intended for training purposes and is a testing ground. It is currently a single page application with a dropzone component. Users can upload DOCX files, which are then displayed on the browser page. Additionally, there is a button to download the converted DOCX content to HTML format.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
+To run this project locally, follow these simple steps:
+
+1. Install dependencies:
+    ```
+    yarn install
+    ```
+2. Start the development server:
+    ```
+    yarn dev
+    ```
+
+Once the development server is running, you can access the application in your browser.
