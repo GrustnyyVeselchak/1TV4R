@@ -41,6 +41,16 @@ export default function Dropzone() {
         }
     };
 
+    const handleDownload = () => {
+        const element = document.createElement('a');
+        const file = new Blob([docxContent], {type: 'text/html'});
+        element.href = URL.createObjectURL(file);
+        element.download = 'converted_document.html';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+    };
+
     return (
         <div>
             <DropzoneArea
@@ -53,8 +63,12 @@ export default function Dropzone() {
                 onChange={(files) => console.log('Files:', files)}
                 onDrop={handleDrop}
             />
-            {docxContent && <DocxViewer content={docxContent} />}
+            {docxContent && (
+                <>
+                    <button onClick={handleDownload}>Download HTML</button>
+                    <DocxViewer content={docxContent} /> 
+                </>
+            )}
         </div>
     );
 }
-    
